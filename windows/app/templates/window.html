@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block title %}{{ context.window.name }}{% endblock %}
+
+{% block content %}
+<div class="card" style="...">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Name: {{ context.window.name }}</li>
+        <li class="list-group-item">Year: {{ context.window.dl }}</li>
+        <li class="list-group-item">Author: {{ context.window.sh}}</li>
+    </ul>
+</div>
+{% endblock %}

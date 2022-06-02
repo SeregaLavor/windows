@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}All books{% endblock %}
+
+{% block content %}
+<h1 class="all-windows-title">All books</h1>
+<div class="img-container">
+    <img alt='book' src="https://www.ukrgate.com/eng/wp-content/uploads/2021/02/The-Ukrainian-Book-Institute-Purchases-380.9-Thousand-Books-for-Public-Libraries1.jpeg" width="500">
+</div>
+    <table class="window-table table table-striped table-hover">
+    <thead>
+    <tr>
+        <th scope="col">id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Dl</th>
+        <th scope="col">Sh</th>
+        <th scope="col">Prise</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for window in context.windows %}
+        <tr>
+            <th scope="row">{{ window.id }}</th>
+            <td><a target="_blank" href={% url 'window' window_id=window.id %}>{{ window.name }}</a></td>
+            <td>{{ window.dl }}</td>
+            <td>{{ window.sh }}</td>
+            <td>{{ book.prise }}</td>
+            <td><a target="_blank" href={% url 'review' book_id=book.id %}>отзыв</a></td>
+            <td>{{ review.text }}</td>
+            {#        TODO: add fields#}
+        </tr>
+    {% endfor %}
+
+
+    </tbody>
+</table>
+{% endblock %}

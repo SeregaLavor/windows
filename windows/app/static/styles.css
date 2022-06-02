@@ -1,0 +1,20 @@
+.all-books-title {
+    color: blue;
+    text-align: center;
+    margin: 40px;
+    background-color: green;
+    border: 4px dashed crimson;
+}
+.img-container {
+    display: flex;
+    justify-content: center;
+}
+img {
+    border-radius: 40px;
+}
+body {
+    background-color: green;
+}
+.book-table {
+    margin-top: 30px;
+}
